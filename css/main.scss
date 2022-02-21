@@ -1,0 +1,134 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+$font-stack: 'Manrope', sans-serif;
+$font-weight: 800;
+$font-size-quote: 1.75rem;
+$font-size-quote-mobile: 1.5rem;
+$primary-cyan: hsl(193, 38%, 86%);
+$primary-green: hsl(150, 100%, 66%);
+$neutral-blue: rgb(32, 38, 50);
+$neutral-dark-blue: hsl(218, 20%, 22%);
+
+body {
+  font-family: $font-stack;
+  font-weight: $font-weight;
+  background: $neutral-blue;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  min-height: calc(100vh - 2rem);
+  padding: 0 1rem;
+}
+
+article {
+  background: $neutral-dark-blue;
+  padding: 4rem 5rem 5rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  width: min-content;
+  box-shadow: 0 0 10px $neutral-dark-blue;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem 4rem 1rem;
+  }
+
+  h1 {
+    color: $primary-green;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 5px;
+  }
+
+  #number {
+    color: transparent;
+  }
+  #number.loaded {
+    color: $primary-green;
+    transition: all 1000ms ease-in;
+  }
+
+  p {
+    font-size: $font-size-quote;
+    margin-bottom: 2rem;
+    color: transparent;
+
+    @media (max-width: 768px) {
+      font-size: $font-size-quote-mobile;
+    }
+  }
+  p.loaded {
+    color: $primary-cyan;
+    transition: all 1000ms ease-in;
+  }
+
+  .btn {
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: $primary-green;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -2.5rem;
+    left: calc(50% - 2.5rem);
+    transition: all 200ms ease-in;
+
+    @media (max-width: 768px) {
+      width: 4rem;
+      height: 4rem;
+      bottom: -2rem;
+      left: calc(50% - 2rem);
+    }
+
+    img {
+      width: 2rem;
+
+      @media (max-width: 768px) {
+        width: 1.5rem;
+      }
+    }
+  }
+
+  .btn:hover,
+  .btn:focus {
+    box-shadow: 0 0 20px $primary-green;
+    animation: 2s infinite rotateIMG;
+  }
+
+  @keyframes rotateIMG {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  height: 2rem;
+  color: $primary-green;
+}
+
+footer a {
+  color: $primary-cyan;
+}

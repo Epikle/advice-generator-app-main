@@ -1,0 +1,159 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  background: #202632;
+  min-height: 100vh;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  min-height: calc(100vh - 2rem);
+  padding: 0 1rem;
+}
+
+article {
+  background: #2d3543;
+  padding: 4rem 5rem 5rem;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  -webkit-box-shadow: 0 0 10px #2d3543;
+          box-shadow: 0 0 10px #2d3543;
+}
+
+@media (max-width: 768px) {
+  article {
+    padding: 2rem 1rem 4rem 1rem;
+  }
+}
+
+article h1 {
+  color: #52ffa8;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  letter-spacing: 5px;
+}
+
+article #number {
+  color: transparent;
+}
+
+article #number.loaded {
+  color: #52ffa8;
+  -webkit-transition: all 1000ms ease-in;
+  transition: all 1000ms ease-in;
+}
+
+article p {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: transparent;
+}
+
+@media (max-width: 768px) {
+  article p {
+    font-size: 1.5rem;
+  }
+}
+
+article p.loaded {
+  color: #cee3e9;
+  -webkit-transition: all 1000ms ease-in;
+  transition: all 1000ms ease-in;
+}
+
+article .btn {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: #52ffa8;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -2.5rem;
+  left: calc(50% - 2.5rem);
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+@media (max-width: 768px) {
+  article .btn {
+    width: 4rem;
+    height: 4rem;
+    bottom: -2rem;
+    left: calc(50% - 2rem);
+  }
+}
+
+article .btn img {
+  width: 2rem;
+}
+
+@media (max-width: 768px) {
+  article .btn img {
+    width: 1.5rem;
+  }
+}
+
+article .btn:hover,
+article .btn:focus {
+  -webkit-box-shadow: 0 0 20px #52ffa8;
+          box-shadow: 0 0 20px #52ffa8;
+  -webkit-animation: 2s infinite rotateIMG;
+          animation: 2s infinite rotateIMG;
+}
+
+@-webkit-keyframes rotateIMG {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateIMG {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  height: 2rem;
+  color: #52ffa8;
+}
+
+footer a {
+  color: #cee3e9;
+}
+/*# sourceMappingURL=main.css.map */
